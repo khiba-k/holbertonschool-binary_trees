@@ -42,20 +42,22 @@ size_t binary_tree_height(const binary_tree_t *tree)
  *_pow - function calculates base to the power of exponent
  *@base: base to insert
  *@exponent: exponent to insert
+ *Return: result
  */
 
-size_t _pow(int base, int exponent) {
+size_t _pow(int base, int exponent)
+{
 	int result = 1;
 	int i;
 
-	if (exponent < 0) {
+	if (exponent < 0)
+	{
 		base = 1 / base;
 		exponent = -exponent;
 	}
 
-	for (i = 0; i < exponent; i++) {
+	for (i = 0; i < exponent; i++)
 		result *= base;
-	}
 	result *= base;
 	return (result);
 }
