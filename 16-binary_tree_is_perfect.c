@@ -5,6 +5,7 @@
  *@base: base to insert
  *@exponent: exponent to insert
  */
+
 int _pow(int base, int exponent) {
 	int result = 1;
 	int i;
@@ -17,8 +18,8 @@ int _pow(int base, int exponent) {
 	for (i = 0; i < exponent; i++) {
 		result *= base;
 	}
-
 	result *= base;
+	return (result);
 }
 
 /**
@@ -26,6 +27,7 @@ int _pow(int base, int exponent) {
  *@tree: pointer to the root node of the tree to check
  *Return: value to return
  */
+
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (_pow(2, binary_tree_height(tree)) - 1 == binary_tree_size(tree))
