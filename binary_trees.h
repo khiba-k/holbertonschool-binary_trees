@@ -47,8 +47,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 binary_tree_t *SetNewNode(int value);
-int right_height(binary_tree_t *tree);
-int left_height(binary_tree_t *tree);
+int right_height(const binary_tree_t *tree);
+int left_height(const binary_tree_t *tree);
 size_t binary_tree_children(const binary_tree_t *tree);
 size_t binary_tree_leaves(const binary_tree_t *tree);
 
