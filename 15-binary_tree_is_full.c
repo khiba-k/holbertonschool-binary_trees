@@ -105,7 +105,7 @@ int binary_tree_is_full(const binary_tree_t *tree)
 {
 	if (
 		(binary_tree_children(tree) > 0 &&
-		binary_tree_leaves(tree) % 2 == 0 && binary_tree_balance(tree) < 0) ||
+		binary_tree_leaves(tree) % 2 == 0 && binary_tree_balance(tree) <= 0) ||
 		(tree->left == NULL && tree->right == NULL && tree->parent == NULL)
 		)
 		return (1);
