@@ -6,7 +6,7 @@
  * Return: pointer to new node
  */
 
-binary_tree_t *SetNewNode_Values(int value)
+binary_tree_t *SetNewNode(int value)
 {
 	binary_tree_t *NewNode;
 	NewNode = malloc(sizeof(binary_tree_t));
