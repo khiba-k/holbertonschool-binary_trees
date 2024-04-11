@@ -6,7 +6,7 @@
  * Return: height of right subtree
  */
 
-int right_height(binary_tree_t *tree)
+int right_height(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
@@ -19,7 +19,7 @@ int right_height(binary_tree_t *tree)
  * Return: height of left subtree
  */
 
-int left_height(binary_tree_t *tree)
+int left_height(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
