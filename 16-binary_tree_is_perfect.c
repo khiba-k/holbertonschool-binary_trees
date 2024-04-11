@@ -6,7 +6,7 @@
  *@exponent: exponent to insert
  */
 
-int _pow(int base, int exponent) {
+size_t _pow(int base, int exponent) {
 	int result = 1;
 	int i;
 
