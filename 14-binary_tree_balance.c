@@ -46,7 +46,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 }
 
 /**
- * right_height - calculates the height of the right subtree 
+ * right_height - calculates the height of the right subtree
  * @tree: pointer to first node in right subtree
  * Return: height of right subtree
  */
