@@ -5,9 +5,11 @@
  *@node: pointer to the node to find the sibling
  *Return: value to return
  */
+
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
 	binary_tree_t *parent;
+
 	if (node == NULL || node->parent == NULL)
 		return (NULL);
 	parent = node->parent;
@@ -16,10 +18,9 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 		if (parent->right == NULL)
 			return (NULL);
 		return (parent->right);
-	} else
-	{
-		if (parent->left == NULL)
-			return (NULL);
-		return (parent->left);
 	}
+	if (parent->left == NULL)
+		return (NULL);
+	return (parent->left);
 }
+
