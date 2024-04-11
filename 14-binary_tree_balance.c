@@ -8,12 +8,9 @@
 
 int right_height(binary_tree_t *tree)
 {
-	int r_height;
-
 	if (tree == NULL)
 		return (0);
-	r_height = right_height(tree->right);
-	return (r_height) + 1;
+	return (binary_tree_height(tree->right));
 }
 
 /**
@@ -24,12 +21,9 @@ int right_height(binary_tree_t *tree)
 
 int left_height(binary_tree_t *tree)
 {
-	int l_height;
-
 	if (tree == NULL)
 		return (0);
-	l_height = left_height(tree->left);
-	return (l_height) + 1;
+	return (binary_tree_height(tree->left));
 }
 
 /**
