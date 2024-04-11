@@ -28,33 +28,27 @@ binary_tree_t *SetNewNode(int value)
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-	binary_tree_t *Leaf, *New;
-
 	if (parent == NULL)
-	{
-		parent = SetNewNode(value);
-		return (parent);
-	}
-	Leaf = parent;
+	       return (SetNewNode(value));
 	if (value < parent->n)
 	{
 		if  (parent->left == NULL)
 		{
-			Leaf->left = SetNewNode(value);
-			Leaf->left->parent = parent;
-			New = Leaf->left;
+			parent->left = SetNewNode(value);
+			parent->left->parent = parent;
+			return (parent->left);
 		} else
 			return (binary_tree_node(parent->left, value));
 	} else if (value > parent->n)
 	{
 		if (parent->right == NULL)
 		{
-			Leaf->right = SetNewNode(value);
-			Leaf->right->parent = parent;
-			New = Leaf->right;
+			parent->right = SetNewNode(value);
+			parent->right->parent = parent;
+			return (parent->right);
 		} else
 			return (binary_tree_node(parent->right, value));
 	}
-	return (New);
+	return (parent);
 }
 
