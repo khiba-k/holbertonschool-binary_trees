@@ -1,6 +1,44 @@
 #include "binary_trees.h"
 
 /**
+ *binary_tree_size - function measures the size of a binary tree
+ *@tree: pointer to the root node of the tree to measure the size
+ *Return: size of tree
+ */
+
+size_t binary_tree_size(const binary_tree_t *tree)
+{
+	if (tree == NULL)
+		return (0);
+	return (binary_tree_size(tree->left) + 1 + binary_tree_size(tree->right));
+}
+
+/**
+ *binary_tree_height - function measures the height of binary tree
+ *@tree: pointer to the root node of the tree to measure the height
+ *Return: value to return
+ */
+
+size_t binary_tree_height(const binary_tree_t *tree)
+{
+	int l_height, r_height;
+
+	if (
+		tree == NULL ||
+		(tree->left == NULL && tree->right == NULL && tree->parent == NULL)
+		)
+		return (0);
+	else if (tree->parent != NULL)
+	{
+		l_height = binary_tree_height(tree->left);
+		r_height = binary_tree_height(tree->right);
+		return (1 + (l_height > r_height ? l_height : r_height));
+	}
+	return (binary_tree_height(tree->left));
+	return (binary_tree_height(tree->right));
+}
+
+/**
  *_pow - function calculates base to the power of exponent
  *@base: base to insert
  *@exponent: exponent to insert
