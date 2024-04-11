@@ -28,7 +28,7 @@ binary_tree_t *SetNewNode(int value)
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-	binary_tree_t *Leaf = parent, *New;
+	binary_tree_t *Leaf = parent, *New = NULL;
 
 	if (parent == NULL)
 	{
