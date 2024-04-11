@@ -13,14 +13,14 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 
 	if (parent == NULL)
 	{
-		parent = SetNewNode_Values(value);
+		parent = SetNewNode(value);
 		return (parent);
 	}
 	if (value < parent->n)
 	{
 		if  (parent->left == NULL)
 		{
-			Leaf->left = SetNewNode_Values(value);
+			Leaf->left = SetNewNode(value);
 			Leaf->left->parent = parent;
 			New = Leaf->left;
 		} else
@@ -29,7 +29,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	{
 		if (parent->right == NULL)
 		{
-			Leaf->right = SetNewNode_Values(value);
+			Leaf->right = SetNewNode(value);
 			Leaf->right->parent = parent;
 			New = Leaf->right;
 		} else
