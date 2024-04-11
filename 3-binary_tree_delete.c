@@ -5,14 +5,13 @@
  *binary_tree_delete - function deletes entire tree
  *@tree: pointer o root node of tree to delete
  */
+
 void binary_tree_delete(binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return;
-	else
-	{
-		binary_tree_delete(tree->left);
-		binary_tree_delete(tree->right);
-	}
+	binary_tree_delete(tree->left);
+	binary_tree_delete(tree->right);
 	free(tree);
 }
+
